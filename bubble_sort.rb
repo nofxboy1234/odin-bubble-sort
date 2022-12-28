@@ -8,20 +8,20 @@ end
 
 def bubble_sort(items)
   n = items.length
-  # swapped = true
-  # while swapped
-  #   swapped = false
-  for i in 1..(n - 1)
-    index_a = i - 1
-    index_b = i
-    next unless items[index_a] > items[index_b]
+  swapped = true
+  while swapped
+    swapped = false
+    for i in 1..(n - 1)
+      index_a = i - 1
+      index_b = i
+      next unless items[index_a] > items[index_b]
 
-    # binding.pry
-    swap_items_in_array(items, index_a, index_b)
-    # swapped = true
+      # binding.pry
+      swap_items_in_array(items, index_a, index_b)
+      swapped = true
+    end
   end
   items
-  # end
 end
 
 # [4, 3, 78, 2, 0, 2]
